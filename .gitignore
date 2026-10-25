@@ -1,0 +1,16 @@
+.env
+build/
+allure-report/
+
+ConfigDumpInfo.xml
+build
+out
+.scannerwork
+*.cfe
+*.dt
+*.1cd
+*.zip
+.settings/
+bin/
+.metadata/
+*.launch

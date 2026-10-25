@@ -1,0 +1,13 @@
+{
+    "filter": {
+        "extensions": ["yaxunit"]
+    },
+    "reportFormat": "jUnit",
+    "reportPath": "./build/out/yaxunit/junit.xml",
+    "closeAfterTests": true,
+    "logging": {
+        "enable": true,
+        "file": "./build/out/yaxunit/yaxunit.log",
+        "level": "debug"
+    }
+}

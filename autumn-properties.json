@@ -1,0 +1,15 @@
+{
+    "vrunner": {
+        "ibconnection": "/F./build/ib",
+        "v8version": "8.5.1.1343",
+        "locale": "ru",
+        "language": "ru",
+        "additional": "/DisplayAllFunctions /Lru /iTaxi /TESTMANAGER",
+        "ordinaryapp": "-1",
+        "test": {
+            "vanessa": {
+                "vanessasettings": "./tools/JSON/vanessaBddConf.json"
+            }
+        }
+    }
+}
