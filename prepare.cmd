@@ -1,18 +1,12 @@
-@chcp 65001
+@echo off
+setlocal
+chcp 65001 >nul
 
-@rem Сборка основной разработческой ИБ. по умолчанию в каталоге build/ib
-call vrunner init-dev --src src/cf %*
+call vrunner infobase init --src build/etalon.dt %*
+if errorlevel 1 exit /b 1
 
-@rem обновление конфигурации основной разработческой ИБ из хранилища. для включения раскомментируйте код ниже
-@rem call vrunner loadrepo %*
-@rem call vrunner updatedb %*
+call vrunner cfe load --extension-name yaxunit --db-user "Администратор" src/cfe/yaxunit %*
+if errorlevel 1 exit /b 1
 
-@rem собрать внешние обработчики и отчеты в каталоге build
-@rem call vrunner compileepf src/epf/МояВнешняяОбработка build %*
-@rem call vrunner compileepf src/erf/МойВнешнийОтчет build %*
-
-@rem собрать расширения конфигурации внутри ИБ
-@rem call vrunner compileext src/cfe/МоеРасширение МоеРасширение %*
-
-@rem Обновление в режиме Предприятия
-call vrunner run --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" --execute $runnerRoot\epf\ЗакрытьПредприятие.epf %*
+call vrunner run enterprise --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" --execute "C:\bin\os\lib\vanessa-runner\epf\ЗакрытьПредприятие.epf" --db-user "Администратор" %*
+if errorlevel 1 exit /b 1
