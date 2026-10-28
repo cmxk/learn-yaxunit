@@ -2,7 +2,7 @@
 setlocal
 chcp 65001 >nul
 
-set VRUNNER_EDT_VERSION=2026.1.3
+set VRUNNER_EDT_VERSION=2025.1.4
 
 call vrunner infobase init --src src/cf %*
 if errorlevel 1 exit /b 1
