@@ -1,0 +1,12 @@
+{
+    "default": {
+        "--v8version": "8.3.27.1786",
+        "--ibconnection": "/F./build/ib",
+        "--db-user": "Администратор",
+        "--db-pwd": ""
+    },
+    "vanessa": {
+        "--vanessasettings": "./tools/VAParams.json",
+        "--workspace": "."
+    }
+}
