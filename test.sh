@@ -8,12 +8,8 @@ WORKSPACE="$(pwd)"
 
 export PATH="$OSCRIPT_BIN:$PATH"
 
-# Очистка зависших процессов 1С
-pkill -f 1cv8c
-
 vrunner run enterprise \
     --ibconnection "/F./build/ib" \
-    --v8version "8.3.27.1786" \
     --db-user "Администратор" \
     --execute "$VA_EPF" \
     --command "StartFeaturePlayer;QuietInstallVanessaExt;VAParams=$VA_PARAMS;WorkspaceRoot=$WORKSPACE" \
